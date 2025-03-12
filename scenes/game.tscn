@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://c65f76hs6kee"]
+[gd_scene load_steps=3 format=3 uid="uid://c65f76hs6kee"]
 
 [ext_resource type="PackedScene" uid="uid://50lvydxo51kb" path="res://scenes/car.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://cirur7pgaqhw4" path="res://scripts/camera.gd" id="2_yqjtg"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Car" parent="." instance=ExtResource("1_uwrxv")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.76232, -0.0224292)
+script = ExtResource("2_yqjtg")
+speed = 0.1

@@ -1,3 +1,39 @@
-[gd_scene format=3 uid="uid://50lvydxo51kb"]
+[gd_scene load_steps=7 format=3 uid="uid://50lvydxo51kb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_b0jew"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_c35m8"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qt2eu"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_50v30"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jtldb"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3mrxu"]
 
 [node name="Car" type="Node3D"]
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_b0jew")
+
+[node name="Roof" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.45, 0, 0, 0, 0.2, 0, 0, 0, 0.7, 0, 0.2, 0.05)
+mesh = SubResource("BoxMesh_c35m8")
+
+[node name="WheelFR" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.74228e-09, -0.025, 0, 0.2, -1.09278e-09, 0, 0, 0, 0.2, 0.25, -0.1, -0.3)
+mesh = SubResource("CylinderMesh_qt2eu")
+
+[node name="WheelFL" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.74228e-09, -0.02, 0, 0.2, -8.74228e-10, 0, 0, 0, 0.2, -0.25, -0.1, -0.3)
+mesh = SubResource("CylinderMesh_50v30")
+
+[node name="WheelRR" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.74228e-09, -0.02, 0, 0.2, -8.74228e-10, 0, 0, 0, 0.2, 0.25, -0.1, 0.3)
+mesh = SubResource("CylinderMesh_jtldb")
+
+[node name="WheelRL" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.74228e-09, -0.02, 0, 0.2, -8.74228e-10, 0, 0, 0, 0.2, -0.25, -0.1, 0.3)
+mesh = SubResource("CylinderMesh_3mrxu")

@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="City Designer"
+run/main_scene="uid://c65f76hs6kee"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://sprites/icon.svg"
+
+[dotnet]
+
+project/assembly_name="City Designer"
 
 [editor]
 
